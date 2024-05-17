@@ -1,0 +1,20 @@
+/* External CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    font-size: 14px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+footer {
+    margin-top: 20px;
+}

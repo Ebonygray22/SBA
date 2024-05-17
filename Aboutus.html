@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Royalty Travel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <!-- Mini Nav Bar -->
+    <header class="container-fluid bg-danger text-white p-2 d-flex justify-content-between">
+        <div>Contact Us: (404)-444-5555</div>
+        <div>
+            <a href="#" class="text-white">Join Our Email List</a> | 
+            <a href="#" class="text-white" data-toggle="modal" data-target="#loginModal">Account Login</a> |
+        </div>
+    </header>
+
+    <!-- Main Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Travel Divas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Group Trips
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#">The Collections</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item" href="#">Africa Collection</a>
+                            <a class="dropdown-item" href="#">Birthday Bash Collection</a>
+                            <a class="dropdown-item" href="#">Cruises Collection</a>
+                            <a class="dropdown-item" href="#">Flying Dress Collection</a>
+                            <a class="dropdown-item" href="#">Love & Luxury Collection</a>
+                            <a class="dropdown-item" href="#">The Girlfriend Collection</a>
+                            <a class="dropdown-item" href="#">The Wine Lovers Collection</a>
+                        </div>
+                        <a class="dropdown-item dropdown-toggle" href="#">Trips by Region</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item" href="#">Africa</a>
+                            <a class="dropdown-item" href="#">Asia</a>
+                            <a class="dropdown-item" href="#">Caribbean</a>
+                            <a class="dropdown-item" href="#">Dubai</a>
+                            <a class="dropdown-item" href="#">Europe</a>
+                            <a class="dropdown-item" href="#">South America</a>
+                        </div>
+                        <a class="dropdown-item dropdown-toggle" href="#">Trips by Year</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item" href="#">2024</a>
+                            <a class="dropdown-item" href="#">2025</a>
+                        </div>
+                        <a class="dropdown-item" href="#">All Trips</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Index.html">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQs.html">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h1 class="text-center">About Royalty Travel</h1>
+        <p class="text-center">We offer unique travel experiences tailored for women. Join us to explore the world in style and comfort.</p>
+        <div class="row">
+            <div class="col-md-4 team-member">
+                <img src="My Fro, My Business_564x880.jpg" class="img-fluid" alt="Team Member 1">
+                <h3>Jane Doe</h3>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="Fine face_564x880.jpg" class="img-fluid" alt="Team Member 2">
+                <h3>Mary Smith</h3>
+                <p>COO</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="pretty_564x880.jpg" class="img-fluid" alt="Team Member 3">
+                <h3>Linda Johnson</h3>
+                <p>Marketing Director</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Royalty Travel</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Inline JavaScript for fade-in animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamMembers = document.querySelectorAll('.team-member');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            teamMembers.forEach(member => {
+                observer.observe(member);
+            });
+        });
+    </script>
+</body>
+</html>
